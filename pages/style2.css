@@ -1,0 +1,219 @@
+body {
+    height: 100%;
+    background-image: url("/assets/batman.jpg");
+    background-repeat: space;
+    background-blend-mode: multiply;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.containerHomePage {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.posterDiv {
+    /* padding-left: 150px; */
+    display: flex;
+    align-items: center;
+}
+
+a>img {
+    height: 300px;
+    width: 300px;
+}
+
+.formContainer {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    font-family: 'Roboto Slab', serif;
+    font-size: large;
+}
+
+input {
+    margin-top: 10px;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 0px 5px 0px 5px;
+}
+
+.err {
+    margin-top: 5px;
+    width: 250px;
+    color: red;
+    background: #DEC5C3;
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
+.err_reg{
+    margin-top: 10px;
+    width: 250px;
+    color: rgb(0, 155, 52);
+    background: rgb(142, 233, 142);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
+.login-logo {
+    height: 300px;
+    width: 300px;
+    margin-left: 50px;
+}
+
+.signUpBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: black;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+}
+
+.signUpBtn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 30px;
+}
+
+.signUpBtn:active {
+    color: #000
+}
+
+.signUpBtn:active:after {
+    background: transparent;
+}
+
+.signUpBtn:hover:before {
+    opacity: 1;
+}
+
+.signUpBtn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FAC70C;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+}
+
+.signIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.msg {
+    color: white;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: #606060;
+}
+
+/* @media only screen and (min-width: 768px) {
+    .containerHomePage {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+    }
+    .poster {
+        height: auto;
+    }
+    .topnav {
+        height: auto;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .containerHomePage {
+        width: 1000px;
+    }
+    .poster {
+        height: auto;
+    }
+    .topnav {
+        height: auto;
+    }
+} */

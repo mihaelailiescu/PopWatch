@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popwatch</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="searchStyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="containerSearchPage">
+
+        <div class="topnav">
+            <div class="header-left">
+                <a href="home.html"><img src="/assets/logo.png" class="logo"></a>
+                <div class="header-right">
+                    <a href="/pages/about-us.html">ABOUT</a>
+                    <a class="help" href="/pages/help.html">HELP</a>
+                    <a href="/pages/contact.html">CONTACT</a>
+                    <a href="/pages/login.html" class="signIn">SIGN IN</a>
+                    <a href="/pages/home.html" class="signOut">SIGN OUT</a>
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Search...">
+                <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+            </div>
+        </div>
+        <div id="bandaDiv">
+            <h1>ADVANCED SEARCH</h1>
+            <object id="banda-svg" data="/assets/banda.svg" type="image/svg+xml"></object>
+        </div>
+        <div id="containerSearchByUser">
+            <button class="paginationBtnTitle" width="30px" height="40px" z-index="100" onclick=displayPreviousMovies(0)><</button>
+            <div id="moviesSearchedByUser" class="moviesSearchedByUser"></div>
+            <button class="paginationBtnTitle" width="30px" height="40px" z-index="100" onclick=displayNextMovies(0)>></button>
+        </div>
+        <br></br>
+
+        <div id="bandaDiv">
+            <h1>SEARCH ANOTHER MOVIES</h1>
+            <object id="banda-svg" data="/assets/banda.svg" type="image/svg+xml"></object>
+        </div>
+
+        <br></br>
+
+        <div id="moviesSearchedByGenreContainer" class="moviesSearchedByGenreContainer">
+            <button id="searchByGenre">Search by Genre</button>
+            <input id="genreInput" placeholder="Search by Genre">
+        </div>
+        <div id="containerSearch1">
+            <button class="paginationBtn btnGenreL" display="none" width="30px" height="40px" z-index="100" onclick=displayPreviousMovies(1)><</button>
+            <div id="moviesSearchedByGenre" class="moviesSearchedByGenre"></div>
+            <button class="paginationBtn btnGenreR" width="30px" height="40px" z-index="100" onclick=displayNextMovies(1)>></button>
+        </div>
+
+
+        <div id="moviesSearchedByLanguageContainer" class="moviesSearchedByLanguageContainer">
+            <button id="searchByLanguage">Search by Language</button>
+            <input id="languageInput" placeholder="Search by Language">
+        </div>
+        <div id="containerSearch2">
+            <button class="paginationBtn btnLanguageL" width="30px" height="40px" z-index="100" onclick=displayPreviousMovies(2)><</button>
+            <div id="moviesSearchedByLanguage" class="moviesSearchedByLanguage"></div>
+            <button class="paginationBtn btnLanguageR" width="30px" height="40px" z-index="100" onclick=displayNextMovies(2)>></button>
+        </div>
+
+
+        <div id="moviesSearchedByYearContainer" class="moviesSearchedByYearContainer">
+            <button id="searchByYear">Search by Year</button>
+            <input id="yearInput" placeholder="Search by Year">
+        </div>
+        <div id="containerSearch3">
+            <button class="paginationBtn btnYearL" width="30px" height="40px" z-index="100" onclick=displayPreviousMovies(3)><</button>
+            <div id="moviesSearchedByYear" class="moviesSearchedByYear"></div>
+            <button class="paginationBtn btnYearR" width="30px" height="40px" z-index="100" onclick=displayNextMovies(3)>></button>
+        </div>
+
+
+        <div id="moviesSearchedByRatingContainer" class="moviesSearchedByRatingContainer">
+            <button id="searchByRaiting">Search by Rating</button>
+            <input id="ratingInput" placeholder="Search by Rating">
+        </div>
+        <div id="containerSearch4">
+            <button class="paginationBtn btnRaitingL" width="30px" height="40px" z-index="100" onclick=displayPreviousMovies(4)><</button>
+            <div id="moviesSearchedByRating" class="moviesSearchedByRating"></div>
+            <button class="paginationBtn btnRaitingR" width="30px" height="40px" z-index="100" onclick=displayNextMovies(4)>></button>
+        </div>
+
+        <footer class="footer">
+        </footer>
+
+    </div>
+    <script src="/models/FetchApi.js"></script>
+    <script src="/views/Movie.js"></script>
+    <script src="/views/home.js"></script>
+    <script src="/views//search.js"></script>
+    <script src="/views/Auth.js"></script>
+</body>
+
+</html>

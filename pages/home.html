@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popwatch</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+</head>
+
+
+
+<body>
+  
+    <div id="containerHomePage">
+
+        <div class="topnav">
+            <div class="header-left">
+                <img src="/assets/logo.png" class="logo">
+                <div class="header-right">
+                    <a href="about-us.html">ABOUT</a>
+                    <a href="help.html">HELP</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="/pages/login.html" class="signIn">SIGN IN</a>
+                    <a href="/pages/home.html" class="signOut">SIGN OUT</a>
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" class="searchTerm" id="searchTerm" placeholder="Search...">
+                <button type="submit" class="searchButton" id="searchButton">
+                    <i class="fa fa-search"></i>
+                    </button>
+            </div>
+        </div>
+        <div class="posterDiv">
+            <img src="/assets/batman.jpg" class="poster">
+            <div class="text">
+                <!-- <h1>DISCOVER NEW <br> ADVENTURES</h1>
+                <button class="signUpBtn" type="button">Sign Up</button> -->
+                
+                <div class="text-not-log">
+                    <h1 >DISCOVER NEW <br> ADVENTURES</h1> 
+                    <button name="signUpBtn" class="signUpBtn" onclick="window.location='login.html';" type="button">Sign Up</button>
+                </div>
+                 
+
+                <div class="text-log" >
+                    <h1>YOUR ADVENTURE STARTED  </h1>
+                    <button name="addMovie" class="signUpBtn" onclick="window.location='newMovie.html';" type="button">Add MOVIE</button>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div class="headerLatestMovies">
+            <div class="colorRed"></div>
+            <h2>LATEST MOVIES</h2>
+        </div>
+
+        <div id="latestMovies" class="latestMovies">
+        </div>
+
+        <div class="headertopRatedMovies">
+            <div class="colorYellow"></div>
+            <h2>TOP RATED MOVIES</h2>
+
+        </div>
+
+        <div id="topRatedMovies" class="topRatedMovies">
+
+        </div>
+
+        <div class="headerAllMovies">
+            <div class="colorRed"></div>
+            <h2>ALL MOVIES</h2>
+        </div>
+
+        <div class="containerAllMovies">
+          <button class="paginationBtn" width="30px" height="40px" z-index="100" onclick=displayPreviousMovies()><</button>
+          <div id="allMovies" class="allMovies"></div>
+          <button class="paginationBtn" width="30px" height="40px" z-index="100" onclick=displayNextMovies()>></button>
+        </div>
+
+        </div>
+
+        <div class="reviewsMovies">
+            <div class="colorRed"></div>
+            <h2>LATEST REVIEWS</h2>
+        </div>
+
+        <div id="reviewsMovies" class="reviewMovies">
+
+        </div>
+
+        <div class="reviewCards">
+            <div class="inner">
+                <div class="border"></div>
+                <div class="row">
+                    <div class="col">
+                        <div class="reviewCard">
+                            <img src="/assets/p1.png" >
+                            <div class="name">Alexandru</div>
+                            <p>Rating</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                            <h4>@Batman V Superman(2017)</h4>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="reviewCard">
+                            <img src="/assets/p2.png" alt="">
+                            <div class="name">Maria</div>
+                            <p>Rating</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                            <h4>@Suicide Squad(2016)</h4>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="reviewCard">
+                            <img src="/assets/p3.png" alt="">
+                            <div class="name">Ioana</div>
+                            <p>Rating</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                            <h4>@The Wolf of Wall Street (2013)</h4>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <section class="ft-social">
+                <ul class="ft-social-list">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-github"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </section>
+
+            <section class="ft-legal">
+                <ul class="ft-legal-list">
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li>&copy; 2019 Copyright</li>
+                </ul>
+            </section>
+        </footer>
+
+    </div>
+    <script src="/models/FetchApi.js"></script>
+    <script src="/views/Movie.js"></script>
+    <script src="/views/home.js"></script>
+    <script src="/views/Auth.js"></script>
+</body>
+
+</html>

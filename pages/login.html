@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popwatch</title>
+    <link type="text/css" rel="stylesheet" href="/pages/style.css">
+    <link type="text/css" rel="stylesheet" href="/pages/style2.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+
+<body>
+        <div class="posterDiv">
+            <!-- <div class="logo-login"> -->
+            <a class="logo-login" href="/pages/home.html"><img src="/assets/logo.png"></a>
+            <div class="formContainer">
+                <div class="signIn">
+                    <h1 class="msg">Alredy registered? Sign Up!</h1>
+                    <div id="login-fail" class="err">Incorrect username or password</div>
+                    <input class="username" type="text" placeholder="username" name="username" id="username" />
+                    <div class="err" id="user_error">Please fill up your Username</div>
+                    <input class="password" type="password" placeholder="password" name="password" id="password" />
+                    <div class="err" id="password_error">Please fill up your Password</div>
+                    <button class="signInBtn signUpBtn" id="sign-in" type="button">Sign In</button>
+                </div>
+
+                <div class="signUp">
+                    <h1 class="msg">Not registered? Create an account now!</h1>
+                    <input type="text" placeholder="username" name="username" id="username2" />
+                    <div class="err" id="user_error2">Please enter a valid username</div>
+                    <input type="password" placeholder="password" name="password" id="password2" />
+                    <div class="err" id="password_error2">Please enter a valid password</div>
+                    <input type="email" placeholder="email" name="email" id="email" />
+
+                    <button class="signUpBtn" id="registerButton" type="button">Sign Up</button>
+                </div>
+                <div class="err_reg">You're registered now. Please sign in!</div>
+                <div class="err" id="register_fail">Username already existing</div>
+            </div>
+            
+        </div>
+
+    <script src="/models/FetchApi.js"></script>
+    <script src="/views/login.js"></script>
+   <script src="/views/register.js"></script>
+
+</body>
+</html>

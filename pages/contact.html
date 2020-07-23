@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popwatch</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="searchStyle.css">
+    <link type="text/css" rel="stylesheet" href="help.css">
+    <link type="text/css" rel="stylesheet" href="contact.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+
+<body>
+    <div id="containerHomePage">
+        <div class="topnav">
+            <div class="header-left">
+                <a href="home.html"><img src="/assets/logo.png" class="logo"></a>
+                <div class="header-right">
+                    <a href="about-us.html">ABOUT</a>
+                    <a href="help.html">HELP</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="/pages/login.html" class="signIn">SIGN IN</a>
+                    <a href="/pages/home.html" class="signOut">SIGN OUT</a>
+                </div>
+            </div>
+            
+        </div>
+        <div id="bandaDiv">
+            <div id="contact">
+                <h1>CONTACT</h1>
+            </div>
+            <object id="banda-svg" data="/assets/banda.svg" type="image/svg+xml"></object>
+        </div>
+        <section id="contact-section">
+            <div class="container">
+                 <h2>Contact Us</h2>
+               <p>Email us and keep upto date with our latest news</p>
+              <div class="contact-form">
+ 
+            <div>
+                  <i class="fa fa-map-marker"></i><span class="form-info">  Cluj-Napoca, Romania, planet Earth, Milky Way Galaxy</span><br>
+                  <i class="fa fa-phone" > </i><span class="form-info"> 004 345 677 890</span><br>
+                  <i class="fa fa-envelope"></i><span class="form-info">  popwatch@frontend13-2.com</span>
+                </div>
+                
+            <div>        
+              <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="text" placeholder="Last Name"><br>
+                <input type="Email" placeholder="Email" required><br>
+                <input type="text" placeholder="Subject of this message"><br>
+                <textarea name="message" placeholder="Message" rows="5" required></textarea><br>
+                <button class="submit" >Send Message</button> 
+              </form>   
+                </div>
+              </div>
+            </div>
+          </section>
+    <footer>
+        <section class="ft-social">
+            <ul class="ft-social-list">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </section>
+        <section class="ft-legal">
+            <ul class="ft-legal-list">
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li>&copy; 2019 Copyright</li>
+            </ul>
+        </section>
+    </footer>
+    </div>
+    <script src="/views/Auth.js"></script>
+</body>
+
+</html>

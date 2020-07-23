@@ -1,0 +1,19 @@
+#paragraph {
+  padding-top: 90px;
+  padding-bottom: 120px;
+  text-decoration: none;
+  padding-left: 120px;
+  font-size: large;
+  padding-bottom: 50px;
+}
+
+a {
+  color: #FAC70C;
+  text-decoration: none;
+}
+
+a>img {
+  height: 20px;
+  position: relative;
+  padding-top: 10px;
+}

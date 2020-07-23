@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popwatch</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="newMovie.css">
+    <link type="text/css" rel="stylesheet" href="searchStyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+
+<body>
+    <div id="containerHomePage">
+
+        <div class="topnav">
+            <div class="header-left">
+                <a href="home.html"><img src="/assets/logo.png" class="logo"></a>
+                
+                <div class="header-right">
+                    <a href="about-us.html">ABOUT</a>
+                    <a href="help.html">HELP</a>
+                    <a href="contact.html">CONTACT</a>
+                    <a href="/pages/login.html" class="signIn">SIGN IN</a>
+                    <a href="/pages/home.html" class="signOut">SIGN OUT</a>
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" class="searchTerm" id="searchTerm" placeholder="Search...">
+                <button type="submit" class="searchButton" id="searchButton">
+                    <i class="fa fa-search"></i>
+                    </button>
+            </div>
+        </div>
+        
+        <div id="bandaDiv">
+            <h1>ADD NEW MOVIE</h1>
+            <object id="banda-svg" data="/assets/banda.svg" type="image/svg+xml"></object>
+        </div>
+
+        <div id="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Congratulations!</strong> New movie has been added!
+          </div>
+
+        <div class="formContainer">
+            <form class="addMovieForm">
+                <div class="row">
+                    <div class="column" id="columnLeft">
+                        <label for="movieTitle">TITLE </label>
+                        <input type="text" value="" name="movieTitle" id="movieTitle" />
+
+                        
+                        <label for="moviePoster">Poster </label>
+                        <input type="text" value="" name="moviePoster" id="moviePoster" />
+
+
+                        <label for="movieYear">Year </label>
+                        <input type="text" value="" name="movieYear" id="movieYear" />
+
+                        <label for="movieRating">RATING </label>
+                        <input type="text" value="" name="movieRating" id="movieRating" />
+                    </div>
+
+                    <div class="column" id="columnRight">
+                        <label for="movieType">Type </label>
+                        <input type="text" value="" name="movieType" id="movieType" />
+
+                        <label for="movieID">imdbID </label>
+                        <input type="text" value="" name="movieID" id="movieID" />
+                        
+
+                        <label for="moviegenre">Genre </label>
+                        <input type="text" value="" name="moviegenre" id="moviegenre" />     
+
+                       <label for="moviePlot">Plot </label>
+                        <input type="text" value="" name="moviePlot" id="moviePlot" />
+                    </div>
+                </div>
+                <div class="btnContainer">
+                    <button class="formBtn" id="saveBtn">SAVE</button>
+                    <button class="formBtn" id="cancelBtn">CANCEL</button>
+                </div>
+            </form>
+        </div>
+       
+
+        <footer>
+            <section class="ft-social">
+                <ul class="ft-social-list">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-github"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </section>
+
+            <section class="ft-legal">
+                <ul class="ft-legal-list">
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li>&copy; 2019 Copyright</li>
+                </ul>
+            </section>
+        </footer>
+
+    </div>
+    <script src="/models/FetchApi.js"></script>
+    <script src="/views/newMovie.js"></script>
+    <script src="/views/Movie.js"></script>
+    <script src="/views/Auth.js"></script>
+</body>
+
+</html>
